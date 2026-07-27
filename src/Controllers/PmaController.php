@@ -26,7 +26,6 @@ class PmaController extends Controller
             return redirect()->back()->withErrors('The phpMyAdmin URL is not configured. Please go to Plugins -> PmaLink -> Settings.');
         }
 
-        // LE CORRECTIF EST ICI : on redirige vers signon.php
         return redirect()->away($pmaUrl . '/signon.php?token=' . $token);
     }
 }
