@@ -1,0 +1,15 @@
+{
+    "id": "pmalink",
+    "name": "PmaLink",
+    "author": "KiyOni",
+    "version": "1.0.0",
+    "description": "Adds a seamless and secure SSO login button to phpMyAdmin directly from the database list.",
+    "category": "plugin",
+    "url": null,
+    "update_url": null,
+    "namespace": "KiyOni\\PmaLink",
+    "class": "PmaLinkPlugin",
+    "panels": null,
+    "panel_version": "1.0.0-beta35",
+    "composer_packages": null
+}
