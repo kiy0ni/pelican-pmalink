@@ -24,7 +24,7 @@ $token =$_GET['token'] ?? '';
 if (!$token) die("Missing token.");
 
 // REPLACE WITH YOUR PELICAN PANEL URL (NO TRAILING SLASH)
-$panelUrl = "[https://panel.your-domain.com](https://panel.your-domain.com)";
+$panelUrl = "https://panel.your-domain.com";
 $url = $panelUrl . "/sso-verify.php?token=" . $token;
 
 $ch = curl_init($url);
