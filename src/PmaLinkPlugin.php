@@ -75,6 +75,11 @@ SCRIPT;
         }
     }
 
+    public function getSettingsFormData(): array
+    {
+        return config("pmalink") ?? [];
+    }
+
     public function getSettingsForm(): array
     {
         return [
