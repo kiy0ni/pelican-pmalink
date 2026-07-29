@@ -1,4 +1,5 @@
 <?php
+
 namespace KiyOni\PmaLink\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -12,15 +13,17 @@ class RouteServiceProvider extends ServiceProvider
         $this->routes(function () {
             Route::middleware(['web', 'auth'])
                 ->prefix('/pmalink')
+                ->scopeBindings()
                 ->group(function () {
                     Route::get('/redirect/{database}', [PmaController::class, 'redirect'])
                         ->name('pmalink.redirect');
                 });
 
-            Route::middleware(['api'])
-                ->prefix('/api/pmalink')
+            Route::middleware(['throttle:60,1'])
+                ->prefix('/pmalink')
                 ->group(function () {
-                    Route::get('/verify/{token}', [PmaController::class, 'verify']);
+                    Route::get('/verify/{token}', [PmaController::class, 'verify'])
+                        ->name('pmalink.verify');
                 });
         });
     }

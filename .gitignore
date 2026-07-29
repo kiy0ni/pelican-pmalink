@@ -1,6 +1,5 @@
-/vendor/
-node_modules/
-.env
-.idea/
-.vscode/
+*.save
+*.bak
+*.bak[0-9]
 *.zip
+.DS_Store

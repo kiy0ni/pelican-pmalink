@@ -2,14 +2,16 @@
     "id": "pmalink",
     "name": "PmaLink",
     "author": "KiyOni",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Adds a seamless and secure SSO login button to phpMyAdmin directly from the database list.",
     "category": "plugin",
-    "url": null,
-    "update_url": null,
+    "url": "https://github.com/kiy0ni/pelican-pmalink",
+    "update_url": "https://raw.githubusercontent.com/kiy0ni/pelican-pmalink/main/update.json",
     "namespace": "KiyOni\\PmaLink",
     "class": "PmaLinkPlugin",
-    "panels": null,
+    "panels": [
+        "server"
+    ],
     "panel_version": "^1.0.0-beta35",
     "composer_packages": null
 }
